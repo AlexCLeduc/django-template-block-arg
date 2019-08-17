@@ -1,0 +1,24 @@
+{% load template_components %}
+<div
+  class="panel {% if title %} panel--with-title {% endif %}"
+>
+  {% if title %}
+    <div class="panel-header">
+      <a href="{{request.build_absolute_uri}}">{{ title }}</a>
+    </div>
+  {% endif %}
+  <div class="panel-body">
+    {{ content }}
+    {% my_lorem_ipsum %}
+
+    {% if include_nested_panel %}
+      <div style="padding: 20px">
+        {% panel title="note that the nested panel does not " %}
+          nested content <br>
+          {{content}}
+
+        {% endpanel %}
+      </div>
+    {% endif %}
+  </div>
+</div>

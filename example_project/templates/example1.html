@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load template_components %}
+
+
+{% block content %}
+  {% with some_var="special_var" %}
+  {% obj_class_name obj %}  
+
+  {% comment %} {% simple_alert 'success' 'hello success' %} {% endcomment %}
+  {% with type='danger' %}
+    {% alert 'danger' %}
+      <p> this is an alert with <strong> block </strong> content! </p>
+      {% if type %}
+        <p> you can stick other templatetags in here </p>
+        <div style="padding:20px">
+          {% alert type='success' %}
+            <p> Including <strong> nested </strong> alerts! </p>
+            <p> The inner content has access to context, like the request: {{request.build_absolute_uri}} </p>
+          {% endalert %}
+        </div>
+      {% endif %}
+    {% endalert %}
+  {% endwith %}
+
+
+  <div>
+    {% panel title="hello world" include_nested_panel=True %}
+      <p> This is a panel body </p>
+      {% if True %}x  
+        <table><tbody>
+          {% for num in num_list %}
+          {% cycle True False as is_even %}
+            <tr {% if is_even %} style="background-color: #ccc; " {% endif %}>
+              <th> value </th>
+              <td> {{num}} </td>
+            </tr>
+            {% endfor %}
+        </tbody></table>
+      {% endif %}
+    {% endpanel %}
+  </div>
+  {% endwith %}
+
+  <div class="margin-top:50px">
+    {% complex_panel panel_type="danger" %}
+      {% blockarg 'panel_header' %}
+        some <strong> rich </strong> title here
+      {% endblockarg %}
+      {% blockarg 'panel_body' %}
+        {% if True %}
+          This is the <i>panel body</i>
+        {% endif %}
+      {% endblockarg %}
+      {% blockarg 'panel_footer' %}
+        This be the footer
+      {% endblockarg %}
+    {% endcomplex_panel %}
+  </div>
+{% endblock %}

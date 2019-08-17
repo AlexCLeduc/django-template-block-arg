@@ -1,0 +1,18 @@
+{% load template_components %}
+<div
+  class="panel {% if title %} panel--with-title {% endif %}"
+>
+  {% if panel_header %}
+    <div class="panel-header">
+      {{ panel_header }}
+    </div>
+  {% endif %}
+  <div class="panel-body">
+    {{ panel_body }}
+  </div>
+  {% if panel_footer %}
+    <div class="panel-footer" style="margin:5px; padding: 5px; border: 1px solid green;">
+      {{panel_footer}}
+    </div>
+  {% endif %}
+</div>

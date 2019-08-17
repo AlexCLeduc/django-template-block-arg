@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>title</title>
+    <style>
+      .alert {
+        border: 1px solid black;
+      }
+      .alert.alert-danger {
+        border-color: red;
+      }
+      .alert.alert-success {
+        border-color: green;
+      }
+      .panel {
+        padding: 10px;
+        border: 1px solid red;
+        margin-top: 20px;
+      }
+      .panel.panel--with-title {
+        padding-top: 20px;
+        border-top-width: 0px;
+      }
+
+    </style>
+  </head>
+  <body>
+  {% block content %}
+  {% endblock %}
+  </body>
+</html>

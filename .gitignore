@@ -1,0 +1,9 @@
+*.egg
+*.egg-info
+dist
+*.pyc
+__pycache__
+*.swp
+*.swo
+.vscode/settings.json
+.ipynb_checkpoints/
