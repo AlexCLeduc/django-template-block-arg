@@ -129,10 +129,8 @@ just like the first example, the header and footer blocks can also contain marku
 
 ## Installation
 
-TODO: get pypi account and publish
-
 ```bash
-pip install django_template_block_args
+pip install django-template-block-args
 ```
 
 This package consists of 2 simple functions whose only dependencies are built-in django. All you need is to import these functions into your existing templatetags module. No need to change anything in your django settings module.
@@ -146,7 +144,6 @@ This package consists of 2 simple functions whose only dependencies are built-in
 ## Contributing/Next steps
 1. Write tests
 2. A short list of examples to replace the docs above 
-3. Figure out if this is [thread-safe](https://docs.djangoproject.com/en/2.2/howto/custom-template-tags/#thread-safety-considerations)
-4. Better error signaling
+3. Better error signaling
     * Make sure people avoid using template content in between a custom-tag and its block-args
     * should not use block-names or content in the function

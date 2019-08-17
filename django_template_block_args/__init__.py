@@ -18,7 +18,6 @@ def register_composed_template(register,filename, func=None, name=None, takes_co
       def compile_func(parser,token):
           bits = token.split_contents()[1:]
 
-          # TODO: figure out if this is lazy/thread-safe
           nodelist = parser.parse((f"end{function_name}",))
           parser.delete_first_token()
 
