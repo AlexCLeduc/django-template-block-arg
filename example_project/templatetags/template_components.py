@@ -103,7 +103,6 @@ def panel(context,title=None, include_nested_panel=False):
     return {
         "title": title,
         "include_nested_panel": include_nested_panel,
-        "request": context['request'],
     }
 
 
