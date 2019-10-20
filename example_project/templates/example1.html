@@ -15,7 +15,7 @@
         <div style="padding:20px">
           {% alert type='success' %}
             <p> Including <strong> nested </strong> alerts! </p>
-            <p> The inner content has access to context, like the request: {{request.build_absolute_uri}} </p>
+            <p> The inner content has access to context, like {{type}}  </p>
           {% endalert %}
         </div>
       {% endif %}
