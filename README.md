@@ -1,4 +1,5 @@
-# `django_template_block_args`
+[![CircleCI](https://circleci.com/gh/AlexCLeduc/django-template-block-arg.svg?style=shield)](https://circleci.com/gh/AlexCLeduc/django-template-block-arg)
+# django-template-block-args
 
 
 ## Motivation
