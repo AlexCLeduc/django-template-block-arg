@@ -192,13 +192,13 @@ This package consists of 2 simple functions whose only dependencies are built-in
 
 ## developing 
 
-This repo contains the package's module, and an example django project. Dependencies are installed using pipenv, but you really only need django 2.x to develop and test this. 
+This repo contains the package's module, and an example django project. Dependencies are installed using pipenv. You can run tests using the familiar `./manage.py test`. 
 
 
 ## Contributing/Next steps
 1. Write a "with_block_as" helper can help with more ad-hoc cases 
   * for instance, if I don't want the footprint of creating another templatetag, but I want to pass a rendered block as an argument to an already existing tag 
 2. Allow nesting named blocks inside conditionals (difficult)
-3. Write tests
+3. Write better tests
 4. A short list of examples to replace the docs above 
 5. Better error signaling
